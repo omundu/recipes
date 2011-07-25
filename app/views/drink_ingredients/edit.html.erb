@@ -1,0 +1,24 @@
+<h1>Editing drink_ingredient</h1>
+
+<% form_for(@drink_ingredient) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :drink_id %><br />
+    <%= f.text_field :drink_id %>
+  </p>
+  <p>
+    <%= f.label :amount %><br />
+    <%= f.text_field :amount %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @drink_ingredient %> |
+<%= link_to 'Back', drink_ingredients_path %>

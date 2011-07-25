@@ -1,0 +1,17 @@
+<h1>Cooking Insainty</h1>
+
+<p>
+  <% for recipe in @recipes -%>
+  
+    <h3><%= link_to recipe.Name, recipe %></h3>
+    <%= recipe.description %>
+  
+  <% end %>
+
+  <% for drink in @drinks -%>
+  
+    <h3><%= link_to  drink.name, drink %></h3>
+    <%= drink.description %>
+  
+  <% end %>
+</p>

@@ -1,0 +1,13 @@
+<p>
+  <b>Drink:</b>
+  <%=h @drink_comment.drink_id %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @drink_comment.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_drink_comment_path(@drink_comment) %> |
+<%= link_to 'Back', drink_comments_path %>

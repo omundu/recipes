@@ -1,0 +1,13 @@
+<p>
+  <b>Recipe:</b>
+  <%=h @comment.recipe_id %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @comment.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>

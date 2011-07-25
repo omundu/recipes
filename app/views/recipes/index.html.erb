@@ -1,0 +1,24 @@
+<h1>Listing recipes</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Name</th>
+    <th>Description</th>
+    
+  </tr>
+
+<% @recipes.each do |recipe| %>
+  <tr>
+    <td><%= image_tag(recipe.image_url) %></td>
+    <td><%= link_to recipe.Name, recipe %></td>
+    <td><%= recipe.description %></td>
+    <td><div class="smaller"><%= link_to 'Edit', edit_recipe_path(recipe) %>
+    <%= link_to 'Destroy', recipe, :confirm => 'Are you sure?', :method => :delete %></div></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Submit New Recipe', new_recipe_path %>

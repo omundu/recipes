@@ -1,0 +1,22 @@
+<h1>Listing drink_comments</h1>
+
+<table>
+  <tr>
+    <th>Drink</th>
+    <th>Body</th>
+  </tr>
+
+<% @drink_comments.each do |drink_comment| %>
+  <tr>
+    <td><%=h drink_comment.drink_id %></td>
+    <td><%=h drink_comment.body %></td>
+    <td><%= link_to 'Show', drink_comment %></td>
+    <td><%= link_to 'Edit', edit_drink_comment_path(drink_comment) %></td>
+    <td><%= link_to 'Destroy', drink_comment, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New drink_comment', new_drink_comment_path %>

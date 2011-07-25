@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  drink_id: 
+  amount: MyString
+  name: MyString
+
+two:
+  drink_id: 
+  amount: MyString
+  name: MyString

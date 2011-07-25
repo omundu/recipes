@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyText
+  username: MyText
+  ingredients: MyText
+  instructions: MyText
+  description: MyText
+  prep_time: 
+  pairs: MyText
+
+two:
+  name: MyText
+  username: MyText
+  ingredients: MyText
+  instructions: MyText
+  description: MyText
+  prep_time: 
+  pairs: MyText

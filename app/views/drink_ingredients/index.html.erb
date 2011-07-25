@@ -1,0 +1,24 @@
+<h1>Listing drink_ingredients</h1>
+
+<table>
+  <tr>
+    <th>Drink</th>
+    <th>Amount</th>
+    <th>Name</th>
+  </tr>
+
+<% @drink_ingredients.each do |drink_ingredient| %>
+  <tr>
+    <td><%=h drink_ingredient.drink_id %></td>
+    <td><%=h drink_ingredient.amount %></td>
+    <td><%=h drink_ingredient.name %></td>
+    <td><%= link_to 'Show', drink_ingredient %></td>
+    <td><%= link_to 'Edit', edit_drink_ingredient_path(drink_ingredient) %></td>
+    <td><%= link_to 'Destroy', drink_ingredient, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New drink_ingredient', new_drink_ingredient_path %>

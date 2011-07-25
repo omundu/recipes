@@ -1,0 +1,6 @@
+<% div_for drink_comment do %>
+<p>
+  <strong>Posted <%= time_ago_in_words(drink_comment.created_at) %> ago <small>by <%= h(drink_comment.user) %> </small></strong><br />
+  <%= h(drink_comment.body) %>
+</p>
+<% end %>

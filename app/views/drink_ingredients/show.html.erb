@@ -1,0 +1,18 @@
+<p>
+  <b>Drink:</b>
+  <%=h @drink_ingredient.drink_id %>
+</p>
+
+<p>
+  <b>Amount:</b>
+  <%=h @drink_ingredient.amount %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @drink_ingredient.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_drink_ingredient_path(@drink_ingredient) %> |
+<%= link_to 'Back', drink_ingredients_path %>

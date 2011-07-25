@@ -1,0 +1,18 @@
+<p>
+  <b>Amount:</b>
+  <%=h @create_ingredient.amount %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%=h @create_ingredient.unit %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @create_ingredient.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_create_ingredient_path(@create_ingredient) %> |
+<%= link_to 'Back', create_ingredients_path %>

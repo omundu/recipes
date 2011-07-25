@@ -1,0 +1,24 @@
+<h1>Listing Ingredients</h1>
+
+<table>
+  <tr>
+    <th>Amount</th>
+    <th>Unit</th>
+    <th>Name</th>
+  </tr>
+
+<% @create_ingredients.each do |create_ingredient| %>
+  <tr>
+    <td><%=h create_ingredient.amount %></td>
+    <td><%=h create_ingredient.unit %></td>
+    <td><%=h create_ingredient.name %></td>
+    <td><%= link_to 'Show', create_ingredient %></td>
+    <td><%= link_to 'Edit', edit_create_ingredient_path(create_ingredient) %></td>
+    <td><%= link_to 'Destroy', create_ingredient, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ingredient', new_create_ingredient_path %>

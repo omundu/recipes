@@ -1,0 +1,48 @@
+<p>
+  <b>Name:</b>
+  <%=h @drink.name %>
+  <br /><br />
+  <b>Submitted by:</b>
+  <%=h @drink.username %>
+</p>
+<p>
+  <b>Description:</b><br /><br />
+  <%= @drink.description %>
+</p>
+
+<p>
+  <b>Ingredients:</b><br /><br />
+  <%= @drink.ingredients %>
+  <br /><br />
+  <b>Instructions:</b><br /><br />
+  <%= @drink.instructions %>
+  <br /><br />
+  <b>Prep time:</b>
+  <%=h @drink.prep_time %> minutes
+</p>
+
+<p>
+  <b>Pairs:</b>
+  <%=h @drink.pairs %>
+</p>
+
+
+<%= link_to 'Edit Drink', edit_drink_path(@drink) %> |
+<%= link_to 'Back to all drinks', drinks_path %>
+
+  <h2>CommentS</h2>
+  <div id= "comments">
+    <%= render :partial => @drink.drink_comments %>
+  </div>
+
+  <% form_for [@drink, DrinkComment.new] do |f| %>
+  <p>
+    <%= f.label :body, "New Comment" %><br />
+    <%= f.text_area :body %><br /><br />
+
+    <%= f.label :user, "User Name" %><br />
+    <%= f.text_field :user %><br /><br />
+
+    <%= f.submit "Add Comment" %>
+  </p>
+  <% end %>

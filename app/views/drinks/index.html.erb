@@ -1,0 +1,28 @@
+<h1>Listing drinks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Submited By</th>
+    <th>Description</th>
+    <th>Prep time</th>
+    <th>Pairs</th>
+  </tr>
+
+<% @drinks.each do |drink| %>
+  <tr>
+    <td><%=h drink.name %></td>
+    <td><%=h drink.username %></td>
+    <td><%=h drink.description %></td>
+    <td><%=h drink.prep_time %></td>
+    <td><%=h drink.pairs %></td>
+    <td><%= link_to 'Show', drink %></td>
+    <td><%= link_to 'Edit', edit_drink_path(drink) %></td>
+    <td><%= link_to 'Destroy', drink, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Submit New Drink', new_drink_path %>
